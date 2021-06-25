@@ -302,7 +302,7 @@ class AdminController extends AbstractController
             if ($promo && $statut==0 && ($now<=$datef) && ($total >= $promo[0]->getMontantmin())):
                 $totalRemise=$panierService->getTotalRemise($promo[0]->getRemise());
                 $this->addFlash('success', 'Félicitation vous bénéficiez de notre remise fidélité');
-
+                $toto="masev";
                 $session->set('remise',$promo[0]->getRemise());
 
                 return $this->render('front/panier.html.twig',[
